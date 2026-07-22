@@ -1,4 +1,27 @@
-css.hero p { 
+
+css/* Hero Section Setup */
+.hero {
+    background: #0d233a; 
+    padding: 5rem 2rem; 
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Image Specific Styling */
+.hero-image {
+    max-width: 100%; 
+    width: 500px; /* Limits the picture size so it is not too large */
+    height: auto; 
+    border-radius: 12px; 
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.hero p { 
     font-size: 1.25rem; 
     margin-bottom: 2.5rem; 
     color: #cbd5e1; 
