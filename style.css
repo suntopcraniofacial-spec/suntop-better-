@@ -1,8 +1,29 @@
+css/* Navigation Bar Styling */
+.navbar {
+    background: #0d233a;
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid #1e293b;
+}
 
-css/* Hero Section Setup */
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.brand-logo {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+/* Hero Section Setup */
 .hero {
     background: #0d233a; 
-    padding: 5rem 2rem; 
+    padding: 4rem 2rem 5rem 2rem; 
     text-align: center;
 }
 
@@ -14,7 +35,7 @@ css/* Hero Section Setup */
 /* Image Specific Styling */
 .hero-image {
     max-width: 100%; 
-    width: 500px; /* Limits the picture size so it is not too large */
+    width: 600px;
     height: auto; 
     border-radius: 12px; 
     margin-bottom: 2rem;
