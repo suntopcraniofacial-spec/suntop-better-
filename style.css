@@ -1,15 +1,38 @@
-css/* Navigation Bar Styling */
+css/* Top Emergency / Info Strip */
+.top-announcement {
+    background: #091829;
+    padding: 0.6rem 2rem;
+    color: #cbd5e1;
+    font-size: 0.85rem;
+    border-bottom: 1px solid #1e293b;
+}
+
+.announcement-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/* Navigation Bar Styling */
 .navbar {
     background: #0d233a;
     padding: 1.5rem 2rem;
-    border-bottom: 1px solid #1e293b;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .brand-logo {
@@ -19,6 +42,25 @@ css/* Navigation Bar Styling */
     text-decoration: none;
     letter-spacing: -0.5px;
 }
+
+.nav-actions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.nav-whatsapp {
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    transition: transform 0.2s ease;
+}
+
+.nav-whatsapp.branch-1 { background: #14b8a6; }
+.nav-whatsapp.branch-2 { background: #25d366; }
+.nav-whatsapp:hover { transform: translateY(-1px); }
 
 /* Hero Section Setup */
 .hero {
@@ -32,7 +74,6 @@ css/* Navigation Bar Styling */
     margin: 0 auto;
 }
 
-/* Image Specific Styling */
 .hero-image {
     max-width: 100%; 
     width: 600px;
@@ -51,27 +92,42 @@ css/* Navigation Bar Styling */
     margin-right: auto; 
 } 
 
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
 .hero .btn { 
-    background: #14b8a6; 
     color: #fff; 
-    padding: 1rem 2.5rem; 
+    padding: 1rem 2rem; 
     text-decoration: none; 
     font-weight: bold; 
     border-radius: 30px; 
-    box-shadow: 0 4px 14px rgba(20, 184, 166, 0.4); 
     transition: all 0.3s ease; 
+    font-size: 0.95rem;
 } 
 
+.btn-murtala {
+    background: #14b8a6;
+    box-shadow: 0 4px 14px rgba(20, 184, 166, 0.4);
+}
+
+.btn-uselu {
+    background: #25d366;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
+}
+
 .hero .btn:hover { 
-    background: #0d9488; 
     transform: translateY(-2px); 
-    box-shadow: 0 6px 20px rgba(20, 184, 166, 0.6); 
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 } 
 
 /* Layout Structure Containers */ 
 .container { 
     max-width: 1200px; 
-    margin: 5rem auto; 
+    margin: 4rem auto; 
     padding: 0 2rem; 
 } 
 
@@ -79,16 +135,49 @@ css/* Navigation Bar Styling */
     text-align: center; 
     margin-bottom: 0.5rem; 
     color: #0d233a; 
-    font-size: 2.2rem; 
+    font-size: 2rem; 
     font-weight: 800; 
 } 
 
 .section-subtitle { 
     text-align: center; 
     color: #64748b; 
-    margin-bottom: 3.5rem; 
-    font-size: 1.15rem; 
+    margin-bottom: 3rem; 
+    font-size: 1.1rem; 
 } 
+
+/* Branch Location Grid Style */
+.location-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 5rem;
+}
+
+.location-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 2rem;
+}
+
+.location-card h3 {
+    color: #0d233a;
+    margin-bottom: 0.75rem;
+    font-size: 1.3rem;
+}
+
+.address-text {
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.branch-meta {
+    font-weight: 700;
+    color: #14b8a6;
+}
 
 /* Insurance Accreditation Badge Strip */ 
 .accreditation-section { 
@@ -133,7 +222,6 @@ css/* Navigation Bar Styling */
     border-radius: 8px;
     padding: 0.75rem;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(13, 35, 58, 0.02);
 }
 
 .facility-card img {
@@ -153,15 +241,13 @@ css/* Navigation Bar Styling */
 /* Treatment Pricing Cards Section */ 
 .pricing-section { 
     max-width: 1200px; 
-    margin: 0 auto 5rem auto; 
-    padding: 0 2rem; 
+    margin: 0 auto;
 } 
 
 .pricing-grid { 
     display: grid; 
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
     gap: 2rem; 
-    margin-top: 2rem; 
 } 
 
 .pricing-card { 
@@ -206,4 +292,3 @@ css/* Navigation Bar Styling */
 .pricing-card .price-sub { 
     font-size: 0.85rem; 
     color: #64748b; 
-}
