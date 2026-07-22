@@ -1,0 +1,126 @@
+css.hero p { 
+    font-size: 1.25rem; 
+    margin-bottom: 2.5rem; 
+    color: #cbd5e1; 
+    max-width: 700px; 
+    margin-left: auto; 
+    margin-right: auto; 
+} 
+
+.hero .btn { 
+    background: #14b8a6; 
+    color: #fff; 
+    padding: 1rem 2.5rem; 
+    text-decoration: none; 
+    font-weight: bold; 
+    border-radius: 30px; 
+    box-shadow: 0 4px 14px rgba(20, 184, 166, 0.4); 
+    transition: all 0.3s ease; 
+} 
+
+.hero .btn:hover { 
+    background: #0d9488; 
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 20px rgba(20, 184, 166, 0.6); 
+} 
+
+/* Layout Structure Containers */ 
+.container { 
+    max-width: 1200px; 
+    margin: 5rem auto; 
+    padding: 0 2rem; 
+} 
+
+.section-title { 
+    text-align: center; 
+    margin-bottom: 0.5rem; 
+    color: #0d233a; 
+    font-size: 2.2rem; 
+    font-weight: 800; 
+} 
+
+.section-subtitle { 
+    text-align: center; 
+    color: #64748b; 
+    margin-bottom: 3.5rem; 
+    font-size: 1.15rem; 
+} 
+
+/* Insurance Accreditation Badge Strip */ 
+.accreditation-section { 
+    background: #fff; 
+    padding: 3rem 2rem; 
+    border-radius: 12px; 
+    box-shadow: 0 10px 30px rgba(13, 35, 58, 0.04); 
+    text-align: center; 
+    margin-bottom: 5rem; 
+    border: 1px solid #e2e8f0; 
+} 
+
+.badge-grid { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 2.5rem; 
+    flex-wrap: wrap; 
+    margin-top: 2rem; 
+} 
+
+.badge-item { 
+    background: #f8fafc; 
+    border: 2px solid #e2e8f0; 
+    border-radius: 8px; 
+    padding: 1.2rem 2rem; 
+    font-weight: 700; 
+    color: #0d233a; 
+} 
+
+/* Treatment Pricing Cards Section */ 
+.pricing-section { 
+    max-width: 1200px; 
+    margin: 0 auto 5rem auto; 
+    padding: 0 2rem; 
+} 
+
+.pricing-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 2rem; 
+    margin-top: 2rem; 
+} 
+
+.pricing-card { 
+    background: #fff; 
+    border-radius: 12px; 
+    padding: 2rem; 
+    box-shadow: 0 10px 30px rgba(13, 35, 58, 0.04); 
+    border: 1px solid #e2e8f0; 
+    text-align: center; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    transition: transform 0.3s ease; 
+} 
+
+.pricing-card:hover { 
+    transform: translateY(-5px); 
+    border-color: #14b8a6; 
+} 
+
+.pricing-card h3 { 
+    color: #0d233a; 
+    font-size: 1.2rem; 
+    margin-bottom: 1rem; 
+} 
+
+.pricing-card .price { 
+    font-size: 1.7rem; 
+    font-weight: 800; 
+    color: #14b8a6; 
+    margin-bottom: 0.5rem; 
+} 
+
+.pricing-card .price-sub { 
+    font-size: 0.85rem; 
+    color: #64748b; 
+}
