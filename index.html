@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+html<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,7 +20,7 @@
         <div class="hero-content">
             <img src="braces.jpg" alt="Dental Braces Treatment" class="hero-image">
             <p>Get a bright, confident smile with our professional orthodontic and dental treatments.</p>
-            <a href="#" class="btn">Book Consultation</a>
+            <a href="#treatments" class="btn">Book Consultation</a>
         </div>
     </section>
 
@@ -35,43 +35,118 @@
             </div>
         </div>
 
-        <!-- Treatment Gallery & Pricing Grid -->
-        <h2 class="section-title">Our Dental Services</h2>
+        <!-- Section: Clinic Tour Gallery -->
+        <h2 class="section-title">Our Practice & Facilities</h2>
+        <p class="section-subtitle">Take a virtual tour of our modern dental workspace</p>
+        
+        <div class="facility-grid">
+            <div class="facility-card">
+                <img src="exterior.jpg" alt="Clinic Exterior Layout">
+                <h4>Clinic Exterior</h4>
+            </div>
+            <div class="facility-card">
+                <img src="interior.jpg" alt="Clinic Main Waiting Area">
+                <h4>Reception Lounge</h4>
+            </div>
+            <div class="facility-card">
+                <img src="interior2.jpg" alt="Dental Consultation Room">
+                <h4>Consultation Room</h4>
+            </div>
+            <div class="facility-card">
+                <img src="xray.jpg" alt="Digital Dental X-Ray Scanner">
+                <h4>Digital X-Ray Suite</h4>
+            </div>
+            <div class="facility-card">
+                <img src="sterylizer.jpg" alt="Advanced Autoclave Equipment">
+                <h4>Sterilizer Station</h4>
+            </div>
+        </div>
+
+        <!-- Section: Treatment Pricing Grid -->
+        <h2 id="treatments" class="section-title" style="margin-top: 6rem;">Our Dental Services</h2>
         <p class="section-subtitle">Affordable and specialized care for your family</p>
         
         <div class="pricing-section">
             <div class="pricing-grid">
                 
-                <!-- Treatment Card 1 (Braces) -->
+                <!-- Card 1: Cleaning -->
                 <div class="pricing-card">
-                    <img src="braces.jpg" alt="Braces Treatment" class="card-img">
-                    <h3>Orthodontic Braces</h3>
-                    <div class="price">₦45,000</div>
-                    <div class="price-sub">Consultation & diagnostics</div>
-                </div>
-
-                <!-- Treatment Card 2 (Rename image to whitening.jpg) -->
-                <div class="pricing-card">
-                    <img src="whitening.jpg" alt="Teeth Whitening" class="card-img">
-                    <h3>Teeth Whitening</h3>
-                    <div class="price">₦75,000</div>
-                    <div class="price-sub">Laser bleaching session</div>
-                </div>
-
-                <!-- Treatment Card 3 (Rename image to cleaning.jpg) -->
-                <div class="pricing-card">
-                    <img src="cleaning.jpg" alt="Dental Cleaning" class="card-img">
-                    <h3>Scaling & Polishing</h3>
+                    <img src="cleaning.jpg" alt="Scaling and Polishing Care" class="card-img">
+                    <h3>Teeth Cleaning</h3>
                     <div class="price">₦25,000</div>
-                    <div class="price-sub">Deep hygiene treatment</div>
+                    <div class="price-sub">Deep scaling & polishing hygiene session</div>
                 </div>
 
-                <!-- Treatment Card 4 (Rename image to implant.jpg) -->
+                <!-- Card 2: Extraction -->
                 <div class="pricing-card">
-                    <img src="implant.jpg" alt="Dental Implant" class="card-img">
-                    <h3>Dental Implants</h3>
-                    <div class="price">₦120,000</div>
-                    <div class="price-sub">Per tooth restoration</div>
+                    <img src="extraction.jpg" alt="Tooth Removal Care" class="card-img">
+                    <h3>Routine Extraction</h3>
+                    <div class="price">₦30,000</div>
+                    <div class="price-sub">Safe tooth removal under local anesthesia</div>
+                </div>
+
+                <!-- Card 3: Wisdom Tooth -->
+                <div class="pricing-card">
+                    <img src="wisdom tooth.jpg" alt="Wisdom Tooth Surgery" class="card-img">
+                    <h3>Wisdom Tooth Care</h3>
+                    <div class="price">₦65,000</div>
+                    <div class="price-sub">Surgical extraction for impacted molars</div>
+                </div>
+
+                <!-- Card 4: Impacted Incisor -->
+                <div class="pricing-card">
+                    <img src="impacted-incisor.jpg" alt="Impacted Incisor Treatment" class="card-img">
+                    <h3>Impacted Incisor</h3>
+                    <div class="price">₦70,000</div>
+                    <div class="price-sub">Specialized exposure and alignment care</div>
+                </div>
+
+                <!-- Card 5: RCT -->
+                <div class="pricing-card">
+                    <img src="rct.jpg" alt="Root Canal Therapy Care" class="card-img">
+                    <h3>Root Canal Therapy (RCT)</h3>
+                    <div class="price">₦85,000</div>
+                    <div class="price-sub">Complete nerve treatment & inner tooth sealing</div>
+                </div>
+
+                <!-- Card 6: Zirconia Crown -->
+                <div class="pricing-card">
+                    <img src="zirconia corwn.jpg" alt="Premium Zirconia Crown Layout" class="card-img">
+                    <h3>Zirconia Crown</h3>
+                    <div class="price">₦150,000</div>
+                    <div class="price-sub">Premium, natural-looking durable capping</div>
+                </div>
+
+                <!-- Card 7: PFM Crown -->
+                <div class="pricing-card">
+                    <img src="pfm.jpg" alt="PFM Crown Restoration" class="card-img">
+                    <h3>PFM Crown</h3>
+                    <div class="price">₦95,000</div>
+                    <div class="price-sub">Porcelain Fused to Metal standard restoration</div>
+                </div>
+
+                <!-- Card 8: PFM Crown 2 -->
+                <div class="pricing-card">
+                    <img src="pfm2.jpg" alt="PFM Multi-unit Care" class="card-img">
+                    <h3>PFM Bridge Placement</h3>
+                    <div class="price">₦180,000</div>
+                    <div class="price-sub">Multi-unit structural metal-porcelain build</div>
+                </div>
+
+                <!-- Card 9: Bridge -->
+                <div class="pricing-card">
+                    <img src="bridge.jpg" alt="Dental Bridge Framework" class="card-img">
+                    <h3>Fixed Dental Bridge</h3>
+                    <div class="price">₦220,000</div>
+                    <div class="price-sub">Standard gap restorative framework</div>
+                </div>
+
+                <!-- Card 10: Bridge 2 -->
+                <div class="pricing-card">
+                    <img src="bridge2.jpg" alt="Complex Multi-Unit Dental Bridge" class="card-img">
+                    <h3>Premium Dental Bridge</h3>
+                    <div class="price">₦290,000</div>
+                    <div class="price-sub">Complex multi-unit prosthetic restoration</div>
                 </div>
 
             </div>
