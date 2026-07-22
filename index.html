@@ -4,11 +4,15 @@ html<!DOCTYPE html>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suntop Craniofacial and Dental Hospital</title>
+    <!-- EMBEDDED ATTRACTIVE MODERN FONT LINK -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Top Banner: Direct Branch Lines (SWAPPED & CORRECTED) -->
+    <!-- Top Banner: Direct Branch Lines -->
     <div class="top-announcement">
         <div class="announcement-container">
             <span>📍 <strong>Murtala Way Branch:</strong> +234 916 905 8409</span>
@@ -54,7 +58,7 @@ html<!DOCTYPE html>
             </div>
         </div>
 
-        <!-- VISUAL SECTION: APPOINTMENT FORM -->
+        <!-- VISUAL SECTION: APPOINTMENT FORM WITH LIVE PHONE POPUP -->
         <div id="appointment-booking" class="booking-section">
             <h2 class="section-title">Schedule an Appointment</h2>
             <p class="section-subtitle">Fill out the details below to complete your booking directly over WhatsApp</p>
@@ -62,10 +66,15 @@ html<!DOCTYPE html>
             <form class="booking-form" onsubmit="sendWhatsApp(event)">
                 <div class="form-group">
                     <label for="branch">Select Clinic Location Branch:</label>
-                    <select id="branch" required>
-                        <option value="Murtala Way Branch (+2349169058409)">23 Murtala Muhammad Way (Opp. MTN)</option>
-                        <option value="Uselu Branch (+2349125890508)">127 Uselu (Success Pharmacy Building)</option>
+                    <select id="branch" onchange="updatePopupNumber()" required>
+                        <option value="Murtala Way Branch">23 Murtala Muhammad Way (Opp. MTN)</option>
+                        <option value="Uselu Branch">127 Uselu (Success Pharmacy Building)</option>
                     </select>
+                </div>
+
+                <!-- LIVE NUMBER POPUP NOTIFICATION -->
+                <div id="whatsapp-popup" class="number-popup">
+                    🚀 Submitting to Murtala Way WhatsApp: <strong>+234 916 905 8409</strong>
                 </div>
 
                 <div class="form-group">
@@ -142,8 +151,24 @@ html<!DOCTYPE html>
         </div>
     </div>
 
-    <!-- SCRIPT FOR AUTOMATIC WHATSAPP ROUTING (UPDATED NUMBERS) -->
     <script>
+        function updatePopupNumber() {
+            const branch = document.getElementById('branch').value;
+            const popup = document.getElementById('whatsapp-popup');
+            
+            if (branch.includes("Uselu")) {
+                popup.innerHTML = "🚀 Submitting to Uselu WhatsApp: <strong>+234 912 589 0508</strong>";
+                popup.style.background = "#e0f2fe";
+                popup.style.color = "#0369a1";
+                popup.style.borderColor = "#bae6fd";
+            } else {
+                popup.innerHTML = "🚀 Submitting to Murtala Way WhatsApp: <strong>+234 916 905 8409</strong>";
+                popup.style.background = "#e6fcf5";
+                popup.style.color = "#0ca678";
+                popup.style.borderColor = "#c3fae8";
+            }
+        }
+
         function sendWhatsApp(event) {
             event.preventDefault();
             
@@ -154,24 +179,15 @@ html<!DOCTYPE html>
             const date = document.getElementById('appointmentDate').value;
             const time = document.getElementById('appointmentTime').value;
 
-            // CORRECTED LOGIC: Swapped the phone number assignments
-            let whatsappNumber = "2349169058409"; // Default to Murtala
+            let whatsappNumber = "2349169058409"; 
             if (branchSelection.includes("Uselu")) {
-                whatsappNumber = "2349125890508"; // Corrected Uselu number
+                whatsappNumber = "2349125890508"; 
             }
 
             const message = "Hello Suntop Craniofacial and Dental Hospital,%0A%0A" +
                             "I would like to submit an appointment request:%0A" +
-                            "• *Branch:* " + encodeURIComponent(branchSelection) + "%0A" +
+                            "• *Selected Location:* " + encodeURIComponent(branchSelection) + "%0A" +
                             "• *Patient Name:* " + encodeURIComponent(name) + "%0A" +
                             "• *Phone Number:* " + encodeURIComponent(phone) + "%0A" +
                             "• *Treatment:* " + encodeURIComponent(treatment) + "%0A" +
                             "• *Date:* " + encodeURIComponent(date) + "%0A" +
-                            "• *Time Slot:* " + encodeURIComponent(time);
-
-            window.open("https://whatsapp.com" + whatsappNumber + "&text=" + message, "_blank");
-        }
-    </script>
-
-</body>
-</html>
