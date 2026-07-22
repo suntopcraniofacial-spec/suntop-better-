@@ -3,205 +3,175 @@ html<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Dental Clinic</title>
+    <title>Suntop Craniofacial and Dental Hospital</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Top Banner: Direct Branch Emergency Lines -->
+    <!-- Top Banner: Direct Branch Lines (SWAPPED & CORRECTED) -->
     <div class="top-announcement">
         <div class="announcement-container">
-            <span>📍 <strong>Murtala Way Branch:</strong> +234 912 589 0508</span>
-            <span>📍 <strong>Uselu Branch:</strong> +234 916 905 8409</span>
+            <span>📍 <strong>Murtala Way Branch:</strong> +234 916 905 8409</span>
+            <span>📍 <strong>Uselu Branch:</strong> +234 912 589 0508</span>
         </div>
     </div>
 
     <!-- Main Navigation Bar -->
     <header class="navbar">
         <div class="nav-container">
-            <a href="#" class="brand-logo">Premium Dental Clinic</a>
-            <div class="nav-actions">
-                <a href="https://wa.me." class="nav-whatsapp branch-1" target="_blank">Chat Murtala Way</a>
-                <a href="https://wa.me." class="nav-whatsapp branch-2" target="_blank">Chat Uselu</a>
-            </div>
+            <a href="#" class="brand-logo">Suntop Dental Hospital</a>
+            <a href="#appointment-booking" class="nav-whatsapp-btn">📅 Book Appointment Now</a>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <img src="braces.jpg" alt="Dental Braces Treatment" class="hero-image">
-            <p>Get a bright, confident smile with our professional orthodontic and dental treatments.</p>
-            <div class="hero-buttons">
-                <a href="https://wa.me." class="btn btn-murtala" target="_blank">Book Murtala Way</a>
-                <a href="https://wa.me." class="btn btn-uselu" target="_blank">Book Uselu Branch</a>
-            </div>
+            <h1 class="hospital-title">Suntop Craniofacial and Dental Hospital</h1>
+            <p class="hospital-caption">The Center Where Highly Affordable Dental Treatments Can Be Obtained in Benin City</p>
+            
+            <img src="braces.jpg" alt="Suntop Dental Braces Treatment" class="hero-image">
+            <p class="hero-subtext">Restore your smile and oral health with expert orthodontic, surgical, and restorative dental procedures tailored to your family's budget.</p>
+            <a href="#appointment-booking" class="btn">Start Booking Form</a>
         </div>
     </section>
 
     <div class="container">
         <!-- Clinic Locations Section -->
         <h2 class="section-title">Our Benin City Branches</h2>
-        <p class="section-subtitle">Visit any of our state-of-the-art facilities nearest to you</p>
+        <p class="section-subtitle">Visit either of our state-of-the-art facilities nearest to you</p>
         
         <div class="location-grid">
-            <!-- Branch 1 Box -->
             <div class="location-card">
                 <h3>Murtala Way Branch</h3>
                 <p class="address-text">23 Murtala Muhammad Way, Opposite MTN, Third, Benin City.</p>
-                <div class="branch-meta">📞 +234 912 589 0508</div>
+                <div class="branch-meta">📞 +234 916 905 8409</div>
             </div>
-            <!-- Branch 2 Box -->
             <div class="location-card">
                 <h3>Uselu Branch</h3>
                 <p class="address-text">127 Uselu, at Success Pharmacy Building, Opposite NNPC, Benin City.</p>
-                <div class="branch-meta">📞 +234 916 905 8409</div>
+                <div class="branch-meta">📞 +234 912 589 0508</div>
             </div>
         </div>
 
-        <!-- Accreditation Strip -->
-        <div class="accreditation-section">
-            <h3>Accepted Insurance & Accreditations</h3>
-            <div class="badge-grid">
-                <div class="badge-item">NHIS Accredited</div>
-                <div class="badge-item">HMO Registered</div>
-                <div class="badge-item">MDCN Certified</div>
-            </div>
-        </div>
+        <!-- VISUAL SECTION: APPOINTMENT FORM -->
+        <div id="appointment-booking" class="booking-section">
+            <h2 class="section-title">Schedule an Appointment</h2>
+            <p class="section-subtitle">Fill out the details below to complete your booking directly over WhatsApp</p>
+            
+            <form class="booking-form" onsubmit="sendWhatsApp(event)">
+                <div class="form-group">
+                    <label for="branch">Select Clinic Location Branch:</label>
+                    <select id="branch" required>
+                        <option value="Murtala Way Branch (+2349169058409)">23 Murtala Muhammad Way (Opp. MTN)</option>
+                        <option value="Uselu Branch (+2349125890508)">127 Uselu (Success Pharmacy Building)</option>
+                    </select>
+                </div>
 
-        <!-- Section: Clinic Tour Gallery -->
-        <h2 class="section-title">Our Practice & Facilities</h2>
-        <p class="section-subtitle">Take a virtual tour of our modern dental workspace</p>
-        
-        <div class="facility-grid">
-            <div class="facility-card">
-                <img src="exterior.jpg" alt="Clinic Exterior">
-                <h4>Clinic Exterior</h4>
-            </div>
-            <div class="facility-card">
-                <img src="interior.jpg" alt="Clinic Main Waiting Area">
-                <h4>Reception Lounge</h4>
-            </div>
-            <div class="facility-card">
-                <img src="interior2.jpg" alt="Dental Consultation Room">
-                <h4>Consultation Room</h4>
-            </div>
-            <div class="facility-card">
-                <img src="xray.jpg" alt="Digital Dental X-Ray Scanner">
-                <h4>Digital X-Ray Suite</h4>
-            </div>
-            <div class="facility-card">
-                <img src="sterylizer.jpg" alt="Advanced Autoclave Equipment">
-                <h4>Sterilizer Station</h4>
-            </div>
+                <div class="form-group">
+                    <label for="patientName">Patient Full Name:</label>
+                    <input type="text" id="patientName" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="patientPhone">Contact Phone Number:</label>
+                    <input type="tel" id="patientPhone" placeholder="Enter your phone number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="treatment">Select Dental Treatment:</label>
+                    <select id="treatment" required>
+                        <option value="Orthodontic Braces">Orthodontic Braces (₦1,500,000+)</option>
+                        <option value="Mouth Odour Treatment">Mouth Odour Treatment (₦40,000)</option>
+                        <option value="Teeth Cleaning">Teeth Cleaning (₦25,000)</option>
+                        <option value="Routine Extraction">Routine Extraction (₦30,000)</option>
+                        <option value="Wisdom Tooth Care">Wisdom Tooth Care (₦65,000)</option>
+                        <option value="Impacted Incisor Treatment">Impacted Incisor Treatment (₦70,000)</option>
+                        <option value="Root Canal Therapy">Root Canal Therapy (₦85,000)</option>
+                        <option value="Zirconia Crown">Zirconia Crown (₦150,000)</option>
+                        <option value="PFM Crown Restoration">PFM Crown / Bridge</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="appointmentDate">Preferred Date:</label>
+                        <input type="date" id="appointmentDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="appointmentTime">Preferred Time Slot:</label>
+                        <input type="time" id="appointmentTime" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-form-btn">📲 Submit to Suntop via WhatsApp</button>
+            </form>
         </div>
 
         <!-- Section: Treatment Pricing Grid -->
-        <h2 id="treatments" class="section-title" style="margin-top: 6rem;">Our Dental Services</h2>
-        <p class="section-subtitle">Affordable and specialized care for your family</p>
+        <h2 class="section-title">Our Dental Services & Pricing</h2>
+        <p class="section-subtitle">Affordable and specialized care for your family in Benin City</p>
         
         <div class="pricing-section">
             <div class="pricing-grid">
-                
-                <!-- Card 1: Orthodontic Braces Treatment -->
                 <div class="pricing-card">
                     <img src="braces.jpg" alt="Orthodontic Braces Care" class="card-img">
                     <h3>Orthodontic Braces</h3>
-                    <div class="price">₦650,000</div>
-                    <div class="price-sub">Complete metallic braces installment plan</div>
+                    <div class="price">₦1,500,000+</div>
+                    <div class="price-sub">Comprehensive orthodontic realignment plan</div>
                 </div>
-
-                <!-- Card 2: Mouth Odour Halitosis Therapy -->
                 <div class="pricing-card">
                     <img src="cleaning.jpg" alt="Mouth Odour Treatment" class="card-img">
                     <h3>Mouth Odour Treatment</h3>
                     <div class="price">₦40,000</div>
                     <div class="price-sub">Halitosis assessment & deep therapy flush</div>
                 </div>
-
-                <!-- Card 3: Cleaning -->
                 <div class="pricing-card">
                     <img src="cleaning.jpg" alt="Scaling and Polishing Care" class="card-img">
                     <h3>Teeth Cleaning</h3>
                     <div class="price">₦25,000</div>
                     <div class="price-sub">Deep scaling & polishing hygiene session</div>
                 </div>
-
-                <!-- Card 4: Routine Extraction -->
                 <div class="pricing-card">
                     <img src="cleaning.jpg" alt="Tooth Extraction Care" class="card-img">
                     <h3>Routine Extraction</h3>
                     <div class="price">₦30,000</div>
                     <div class="price-sub">Safe tooth removal under local anesthesia</div>
                 </div>
-
-                <!-- Card 5: Wisdom Tooth -->
-                <div class="pricing-card">
-                    <img src="wisdom tooth.jpg" alt="Wisdom Tooth Surgery" class="card-img">
-                    <h3>Wisdom Tooth Care</h3>
-                    <div class="price">₦65,000</div>
-                    <div class="price-sub">Surgical extraction for impacted molars</div>
-                </div>
-
-                <!-- Card 6: Impacted Incisor -->
-                <div class="pricing-card">
-                    <img src="impacted-incisor.jpg" alt="Impacted Incisor Treatment" class="card-img">
-                    <h3>Impacted Incisor</h3>
-                    <div class="price">₦70,000</div>
-                    <div class="price-sub">Specialized exposure and alignment care</div>
-                </div>
-
-                <!-- Card 7: RCT -->
-                <div class="pricing-card">
-                    <img src="rct.jpg" alt="Root Canal Therapy Care" class="card-img">
-                    <h3>Root Canal Therapy (RCT)</h3>
-                    <div class="price">₦85,000</div>
-                    <div class="price-sub">Complete nerve treatment & sealing</div>
-                </div>
-
-                <!-- Card 8: Zirconia Crown -->
-                <div class="pricing-card">
-                    <img src="zirconia corwn.jpg" alt="Premium Zirconia Crown" class="card-img">
-                    <h3>Zirconia Crown</h3>
-                    <div class="price">₦150,000</div>
-                    <div class="price-sub">Premium, natural-looking durable capping</div>
-                </div>
-
-                <!-- Card 9: PFM Crown -->
-                <div class="pricing-card">
-                    <img src="pfm.jpg" alt="PFM Crown Restoration" class="card-img">
-                    <h3>PFM Crown</h3>
-                    <div class="price">₦95,000</div>
-                    <div class="price-sub">Porcelain Fused to Metal standard crown</div>
-                </div>
-
-                <!-- Card 10: PFM Crown 2 -->
-                <div class="pricing-card">
-                    <img src="pfm2.jpg" alt="PFM Multi-unit Care" class="card-img">
-                    <h3>PFM Bridge Placement</h3>
-                    <div class="price">₦180,000</div>
-                    <div class="price-sub">Multi-unit structural metal-porcelain build</div>
-                </div>
-
-                <!-- Card 11: Bridge -->
-                <div class="pricing-card">
-                    <img src="bridge.jpg" alt="Dental Bridge Framework" class="card-img">
-                    <h3>Fixed Dental Bridge</h3>
-                    <div class="price">₦220,000</div>
-                    <div class="price-sub">Standard gap restorative framework</div>
-                </div>
-
-                <!-- Card 12: Bridge 2 -->
-                <div class="pricing-card">
-                    <img src="bridge2.jpg" alt="Complex Multi-Unit Dental Bridge" class="card-img">
-                    <h3>Premium Dental Bridge</h3>
-                    <div class="price">₦290,000</div>
-                    <div class="price-sub">Complex multi-unit prosthetic restoration</div>
-                </div>
-
             </div>
         </div>
     </div>
+
+    <!-- SCRIPT FOR AUTOMATIC WHATSAPP ROUTING (UPDATED NUMBERS) -->
+    <script>
+        function sendWhatsApp(event) {
+            event.preventDefault();
+            
+            const branchSelection = document.getElementById('branch').value;
+            const name = document.getElementById('patientName').value;
+            const phone = document.getElementById('patientPhone').value;
+            const treatment = document.getElementById('treatment').value;
+            const date = document.getElementById('appointmentDate').value;
+            const time = document.getElementById('appointmentTime').value;
+
+            // CORRECTED LOGIC: Swapped the phone number assignments
+            let whatsappNumber = "2349169058409"; // Default to Murtala
+            if (branchSelection.includes("Uselu")) {
+                whatsappNumber = "2349125890508"; // Corrected Uselu number
+            }
+
+            const message = "Hello Suntop Craniofacial and Dental Hospital,%0A%0A" +
+                            "I would like to submit an appointment request:%0A" +
+                            "• *Branch:* " + encodeURIComponent(branchSelection) + "%0A" +
+                            "• *Patient Name:* " + encodeURIComponent(name) + "%0A" +
+                            "• *Phone Number:* " + encodeURIComponent(phone) + "%0A" +
+                            "• *Treatment:* " + encodeURIComponent(treatment) + "%0A" +
+                            "• *Date:* " + encodeURIComponent(date) + "%0A" +
+                            "• *Time Slot:* " + encodeURIComponent(time);
+
+            window.open("https://whatsapp.com" + whatsappNumber + "&text=" + message, "_blank");
+        }
+    </script>
 
 </body>
 </html>
