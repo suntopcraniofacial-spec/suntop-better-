@@ -1,45 +1,85 @@
-```css
-/* Global Reset & Attractive Font Application */
+css/* ==========================================================================
+   1. VARIABLES & CORE STYLES
+   ========================================================================== */
+:root {
+    --primary-color: #0b4f6c;     /* Clinical Deep Teal */
+    --accent-color: #20bf6b;      /* Healthy Green for WhatsApp/Success */
+    --text-dark: #2d3748;         /* High-contrast body text */
+    --text-light: #718096;        /* Subtitles & captions */
+    --bg-light: #f7fafc;          /* Global page background */
+    --card-bg: #ffffff;           /* Content blocks & cards */
+    --font-main: 'Plus Jakarta Sans', sans-serif;
+    --border-radius: 12px;
+    --transition: all 0.3s ease;
+}
+
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Plus Jakarta Sans', sans-serif; /* Applied premium modern font style */
 }
 
 body {
-    background-color: #f8fafc;
-    color: #0f172a;
-    -webkit-font-smoothing: antialiased;
+    font-family: var(--font-main);
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
 }
 
-/* Top Announcement Strip */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Typography Templates */
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 40px;
+}
+
+/* ==========================================================================
+   2. LAYOUT ELEMENTS (HEADER & BANNER)
+   ========================================================================== */
 .top-announcement {
-    background: #091829;
-    padding: 0.8rem 2rem;
-    color: #e2e8f0;
-    font-size: 1.05rem; /* Made bigger */
-    font-weight: 500;
-    border-bottom: 1px solid #1e293b;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    font-size: 0.9rem;
 }
 
 .announcement-container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 10px;
 }
 
-/* Sticky Header & Navbar */
+.top-announcement a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
 .navbar {
-    background: #0d233a;
-    padding: 1.8rem 2rem; /* Increased padding size */
+    background: var(--card-bg);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    padding: 15px 20px;
 }
 
 .nav-container {
@@ -48,302 +88,361 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .brand-logo {
-    color: #fff;
-    font-size: 1.8rem; /* Made bolder and bigger */
+    font-size: 1.4rem;
     font-weight: 800;
+    color: var(--primary-color);
     text-decoration: none;
-    letter-spacing: -0.5px;
+}
+
+.nav-links a {
+    color: var(--text-dark);
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
 }
 
 .nav-whatsapp-btn {
-    background: #25d366;
-    color: #fff;
-    padding: 0.8rem 1.6rem; /* Expanded button click sizes */
-    text-decoration: none;
-    font-weight: 700;
+    background-color: var(--accent-color);
+    color: white !important;
+    padding: 8px 16px;
     border-radius: 30px;
-    font-size: 1.05rem; /* Enlarged text size */
-    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
 }
 
-/* Redesigned Bolder Hero Area Layout */
+/* ==========================================================================
+   3. HERO SECTION
+   ========================================================================== */
 .hero {
-    background: #0d233a; 
-    padding: 6rem 2rem 8rem 2rem; /* Enhanced spatial padding boundaries */
+    background: linear-gradient(135deg, #eef2f7 0%, #dfebf5 100%);
+    padding: 60px 20px;
     text-align: center;
 }
 
 .hero-content {
-    max-width: 1200px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
 .hospital-title {
-    color: #ffffff;
-    font-size: 3.8rem; /* Large Headline */
+    font-size: 2.5rem;
     font-weight: 800;
-    margin-bottom: 1.2rem;
-    letter-spacing: -1.5px;
-    line-height: 1.2;
+    color: var(--primary-color);
+    margin-bottom: 15px;
 }
 
 .hospital-caption {
-    color: #14b8a6;
-    font-size: 1.8rem; /* Significantly enlarged subcaption text */
-    font-weight: 700;
-    max-width: 900px;
-    margin: 0 auto 3.5rem auto;
-    line-height: 1.4;
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    font-weight: 600;
+    margin-bottom: 30px;
 }
 
 .hero-image {
-    max-width: 100%; 
-    width: 700px; /* Scaled visual graphic scale */
-    height: auto; 
-    border-radius: 16px; 
-    margin-bottom: 3rem;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+    width: 100%;
+    max-width: 650px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    margin-bottom: 25px;
 }
 
-.hero-subtext { 
-    font-size: 1.4rem; /* Upgraded to larger body metrics */
-    margin-bottom: 3.5rem; 
-    color: #cbd5e1; 
-    max-width: 850px; 
-    margin-left: auto; 
-    margin-right: auto; 
-    line-height: 1.7;
-} 
-
-.hero .btn { 
-    background: #14b8a6;
-    color: #fff; 
-    padding: 1.3rem 3.5rem; /* Larger scale primary call to action */
-    text-decoration: none; 
-    font-weight: 800; 
-    border-radius: 40px; 
-    font-size: 1.2rem; /* Bigger size typography */
-    box-shadow: 0 6px 20px rgba(20, 184, 166, 0.4);
-    transition: all 0.3s ease;
+.hero-subtext {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 30px;
 }
 
-.hero .btn:hover {
-    transform: translateY(-3px);
-    background: #0d9488;
-    box-shadow: 0 8px 25px rgba(20, 184, 166, 0.6);
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 14px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(11,79,108,0.2);
+    transition: var(--transition);
 }
 
-/* Sections Structure Layouts */ 
-.container { 
-    max-width: 1200px; 
-    margin: 6rem auto; 
-    padding: 0 2rem; 
-} 
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(11,79,108,0.3);
+}
 
-.section-title { 
-    text-align: center; 
-    margin-bottom: 0.8rem; 
-    color: #0d233a; 
-    font-size: 2.6rem; /* Enhanced section visibility text metrics */
-    font-weight: 800; 
-    letter-spacing: -0.5px;
-} 
+/* ==========================================================================
+   4. LOCATION CARDS & LAYOUTS
+   ========================================================================== */
+.locations-section {
+    margin-bottom: 60px;
+}
 
-.section-subtitle { 
-    text-align: center; 
-    color: #475569; 
-    margin-bottom: 4rem; 
-    font-size: 1.3rem; /* Upgraded to larger body readability scale */
-    font-weight: 500;
-} 
+.location-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
 
-/* High Contrast Appointment Booking Form UI */
+.location-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    border-left: 5px solid var(--primary-color);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.location-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 12px;
+}
+
+.address-text {
+    color: var(--text-light);
+    margin-bottom: 15px;
+}
+
+.branch-meta a {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   5. BOOKING FORM & INTERACTIVE POPUPS
+   ========================================================================== */
 .booking-section {
-    background: #ffffff;
-    max-width: 700px; /* Wider spacing field limits */
-    margin: 0 auto 6rem auto;
-    padding: 3.5rem; /* Deeper internal space elements */
-    border-radius: 20px;
-    box-shadow: 0 12px 50px rgba(13, 35, 58, 0.08);
-    border: 1px solid #e2e8f0;
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    max-width: 700px;
+    margin: 0 auto 60px auto;
 }
 
 .booking-form {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 20px;
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
-    gap: 0.6rem;
-    text-align: left;
-}
-
-.form-group label {
-    font-weight: 700;
-    color: #0d233a;
-    font-size: 1.1rem; /* Highly visible text labels */
-}
-
-.form-group input, .form-group select {
-    padding: 1rem 1.2rem; /* Thick readable interactive fields */
-    border: 2px solid #cbd5e1;
-    border-radius: 10px;
-    font-size: 1.15rem; /* Larger text inside inputs */
-    color: #0f172a;
-    background: #f8fafc;
-    font-weight: 500;
-}
-
-.form-group input:focus, .form-group select:focus {
-    border-color: #14b8a6;
-    background: #fff;
-    outline: none;
+    gap: 8px;
 }
 
 .form-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
+    gap: 20px;
 }
 
-/* Form Submission Display Bar Notify */
-.number-popup {
-    padding: 1.2rem;
-    border-radius: 10px;
-    font-size: 1.15rem; /* Larger notification text */
-    text-align: center;
-    border: 1px solid #c3fae8;
-    background: #e6fcf5;
-    color: #0ca678;
+label {
     font-weight: 600;
-    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+input, select {
+    padding: 12px;
+    border: 1px solid #cbd5e0;
+    border-radius: 8px;
+    font-family: var(--font-main);
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(11,79,108,0.1);
+}
+
+/* Live Floating Status Bar */
+.number-popup {
+    background-color: #ebf8ff;
+    border: 1px solid #bee3f8;
+    color: #2b6cb0;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-align: center;
 }
 
 .submit-form-btn {
-    background: #25d366;
+    background-color: var(--accent-color);
     color: white;
     border: none;
-    padding: 1.2rem;
-    font-size: 1.3rem; /* Expanded button text scale */
-    font-weight: 800;
-    border-radius: 10px;
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
     cursor: pointer;
-    margin-top: 1rem;
-    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
-    transition: background 0.2s ease;
+    font-family: var(--font-main);
+    box-shadow: 0 4px 12px rgba(32,191,107,0.2);
+    transition: var(--transition);
 }
 
 .submit-form-btn:hover {
-    background: #128c7e;
+    background-color: #1aa35a;
+    transform: translateY(-1px);
 }
 
-/* Branch Location Presentation Layout Grid */
-.location-grid {
+/* ==========================================================================
+   6. TREATMENT PREVIEW COMPONENT
+   ========================================================================== */
+.pricing-section {
+    margin-bottom: 60px;
+}
+
+.pricing-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2.5rem;
-    margin-bottom: 6rem;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 25px;
 }
 
-.location-card {
-    background: #ffffff;
-    border: 2px solid #e2e8f0;
-    border-radius: 16px;
-    padding: 2.5rem;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+.pricing-card {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    transition: var(--transition);
+    text-align: center;
+    border: 1px solid #edf2f7;
 }
 
-.location-card h3 {
-    color: #0d233a;
-    margin-bottom: 1rem;
-    font-size: 1.6rem; /* Enriched hierarchy title scales */
-    font-weight: 800;
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
-
-.address-text {
-    color: #334155;
-    line-height: 1.7;
-    font-size: 1.2rem; /* Clean text sizes for street details */
-    font-weight: 500;
-    margin-bottom: 1.5rem;
-}
-
-.branch-meta {
-    font-weight: 800;
-    color: #14b8a6;
-    font-size: 1.25rem; /* Clear larger numbers output lines */
-}
-
-/* Treatment Pricing Layout Array */ 
-.pricing-section { 
-    max-width: 1200px; 
-    margin: 0 auto;
-} 
-
-.pricing-grid { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-    gap: 2.5rem; 
-} 
-
-.pricing-card { 
-    background: #fff; 
-    border-radius: 16px; 
-    padding: 2rem; 
-    box-shadow: 0 10px 30px rgba(13, 35, 58, 0.04); 
-    border: 2px solid #e2e8f0; 
-    text-align: center; 
-    display: flex; 
-    flex-direction: column; 
-    justify-content: space-between; 
-    transition: transform 0.3s ease, border-color 0.3s ease;
-} 
-
-.pricing-card:hover { 
-    transform: translateY(-5px); 
-    border-color: #14b8a6; 
-} 
 
 .card-img {
     width: 100%;
-    height: 200px; /* Slightly taller treatment card boxes */
+    height: 180px;
     object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 1.5rem;
 }
 
-.pricing-card h3 { 
-    color: #0d233a; 
-    font-size: 1.4rem; /* Enlarged item title header */
-    margin-bottom: 1rem; 
-    font-weight: 700;
-} 
-
-.pricing-card .price { 
-    font-size: 2.1rem; /* Dramatic emphasis pricing layout text metrics */
-    font-weight: 800; 
-    color: #14b8a6; 
-    margin-bottom: 0.5rem; 
-} 
-
-.pricing-card .price-sub { 
-    font-size: 1.05rem; /* Highly readable subtext details specifications */
-    color: #475569; 
-    font-weight: 500;
+.pricing-card h3 {
+    font-size: 1.15rem;
+    padding: 20px 15px;
+    color: var(--primary-color);
 }
 
-/* Responsive Structural Media Breaks */
+/* ==========================================================================
+   7. SEPARATE CLINIC INFRASTRUCTURE & FACILITY GALLERY
+   ========================================================================== */
+.facility-section {
+    margin-bottom: 60px;
+    background: #edf2f7;
+    padding: 50px 20px;
+    border-radius: var(--border-radius);
+}
+
+.facility-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.facility-card {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.facility-img {
+    width: 100%;
+    height: 165px;
+    object-fit: cover;
+    display: block;
+    transition: var(--transition);
+}
+
+.facility-card:hover .facility-img {
+    transform: scale(1.04);
+}
+
+.facility-card h4 {
+    padding: 12px;
+    font-size: 0.95rem;
+    text-align: center;
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   8. PROCEDURE VIDEOS COMPONENT
+   ========================================================================== */
+.videos-section {
+    margin-bottom: 40px;
+}
+
+.video-grid {
+    display: flex;
+    justify-content: center;
+}
+
+.video-wrapper {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+    width: 100%;
+    max-width: 750px;
+}
+
+.video-wrapper h4 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.procedure-video {
+    width: 100%;
+    border-radius: 8px;
+    background-color: #000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: block;
+}
+
+/* ==========================================================================
+   9. RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
 @media (max-width: 768px) {
-    .hospital-title { font-size: 2.4rem; }
-    .hospital-caption { font-size: 1.35rem; }
-    .hero-subtext { font-size: 1.15rem; }
-    .section-title { font-size: 2rem; }
-    .form-row { grid-template-columns: 1fr; }
-    .booking-section { padding: 1.5rem; }
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    .hospital-title {
+        font-size: 2rem;
+    }
+    .booking-section {
+        padding: 20px;
+    }
+    .nav-container {
+        flex-direction: column;
+    }
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    .nav-links a {
+        margin-right: 10px;
+        font-size: 0.9rem;
+    }
 }
