@@ -1,62 +1,177 @@
-html<div class="form-group">
-    <label for="treatment">Select Dental / Craniofacial Treatment:</label>
-    <select id="treatment" required>
-        <!-- EMERGENCY BLOCK -->
-        <optgroup label="🚨 Urgent Assistance">
-            <option value="Emergency Dental Treatment">Emergency Dental Treatment</option>
-        </optgroup>
+html<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suntop Craniofacial and Dental Hospital</title>
+    <!-- FIXED GOOGLE FONTS LINK -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-        <optgroup label="General & Preventive Care">
-            <option value="Scaling and Polishing">Scaling & Polishing</option>
-            <option value="Mouth Odour Treatment">Mouth Odour Treatment</option>
-            <option value="Teeth Whitening">Teeth Whitening</option>
-        </optgroup>
-        
-        <optgroup label="Surgical Extractions">
-            <option value="Simple Extraction">Simple Extraction</option>
-            <option value="Routine Extraction">Routine Extraction</option>
-            <option value="Wisdom Tooth Extraction">Wisdom Tooth Care</option>
-        </optgroup>
-        
-        <optgroup label="Restorations & Orthodontics">
-            <option value="GIC Filling">GIC Filling</option>
-            <option value="Composite Filling">Composite Restoration</option>
-            <option value="Amalgam Filling">Amalgam Filling</option>
-            <option value="Crowns">Crowns (General)</option>
-            <option value="Acrylic Crowns">Acrylic Crowns</option>
-            <option value="Post and Core">Post and Core Treatment</option>
-            <option value="Root Canal Therapy (RCT)">Root Canal Therapy (RCT)</option>
-            <option value="Orthodontic Braces">Orthodontic Braces (Braces 2)</option>
-        </optgroup>
-        
-        <optgroup label="Prosthodontics & Crowns">
-            <option value="Zirconia Crown">Zirconia Crown</option>
-            <option value="PFM Crown 1">PFM Crown Type 1</option>
-            <option value="PFM Crown 2">PFM Crown Type 2</option>
-            <option value="Dental Bridge 1">Dental Bridge Variant 1</option>
-            <option value="Dental Bridge 2">Dental Bridge Variant 2</option>
-            <option value="Denture Restoration">Denture Therapy</option>
-            <option value="Dental Implant">Dental Implant Surgery</option>
-        </optgroup>
-        
-        <optgroup label="Advanced Craniofacial & Maxillofacial Surgery">
-            <option value="Parotidectomy">Parotidectomy Surgery</option>
-            <option value="TMJ Surgery">TMJ Surgery Procedure</option>
-            <option value="Maxillectomy">Maxillectomy Procedure</option>
-            <option value="Mandibulectomy">Mandibulectomy Procedure</option>
-            <option value="Cleft Lip Repair">Cleft Lip Reconstructive Surgery</option>
-            <option value="Cleft Palate Repair">Cleft Palate Reconstructive Surgery</option>
-            <option value="Face Reconstruction">Advanced Face Reconstruction</option>
-            <option value="Face Esthetic Surgery">Face Esthetic Aesthetic Surgery</option>
-            <option value="Lip Augmentation">Lip Augmentation Treatment</option>
-            <option value="Keloid Treatment">Advanced Keloid Removal</option>
-        </optgroup>
+    <!-- Top Banner: Direct Branch Lines -->
+    <div class="top-announcement">
+        <div class="announcement-container">
+            <span>📍 <strong>Murtala Way Branch:</strong> <a href="tel:+2349169058409">+234 916 905 8409</a></span>
+            <span>📍 <strong>Uselu Branch:</strong> <a href="tel:+2349125890508">+234 912 589 0508</a></span>
+        </div>
+    </div>
 
-        <!-- GENERAL MISCELLANEOUS OPTION -->
-        <optgroup label="Other Concerns">
-            <option value="Other Treatment Requirement">Other (Please discuss with Consultant)</option>
-        </optgroup>
-    </select>
-</div>
-                       
-                 
+    <!-- Main Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="brand-logo">Suntop Dental Hospital</a>
+            <div class="nav-links">
+                <a href="#services">Treatments</a>
+                <a href="#facility-tour">Facility Tour</a>
+                <a href="#videos">Procedure Videos</a>
+                <a href="#appointment-booking" class="nav-whatsapp-btn">📅 Book Now</a>
+                <!-- DARK MODE TOGGLE ACCENT SWITCH -->
+                <button id="theme-toggle" class="toggle-btn" aria-label="Toggle dark mode">🌙 Dark Mode</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hospital-title">Suntop Craniofacial and Dental Hospital</h1>
+            <p class="hospital-caption">The Center Where Highly Affordable Dental Treatments Can Be Obtained in Benin City</p>
+            
+            <img src="braces2.jpg" alt="Suntop Dental Braces Treatment" class="hero-image">
+            <p class="hero-subtext">Restore your smile and oral health with expert orthodontic, surgical, and restorative dental procedures tailored to your family's budget.</p>
+            <a href="#appointment-booking" class="btn">Start Booking Form</a>
+        </div>
+    </section>
+
+    <main class="container">
+        <!-- Clinic Locations Section -->
+        <section class="locations-section">
+            <h2 class="section-title">Our Benin City Branches</h2>
+            <p class="section-subtitle">Visit either of our state-of-the-art facilities nearest to you</p>
+            
+            <div class="location-grid">
+                <div class="location-card">
+                    <h3>Murtala Way Branch</h3>
+                    <p class="address-text">23 Murtala Muhammad Way, Opposite MTN, Third, Benin City.</p>
+                    <div class="branch-meta">📞 <a href="tel:+2349169058409">+234 916 905 8409</a></div>
+                </div>
+                <div class="location-card">
+                    <h3>Uselu Branch</h3>
+                    <p class="address-text">127 Uselu, at Success Pharmacy Building, Opposite NNPC, Benin City.</p>
+                    <div class="branch-meta">📞 <a href="tel:+2349125890508">+234 912 589 0508</a></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Appointment Form Section -->
+        <section id="appointment-booking" class="booking-section">
+            <h2 class="section-title">Schedule an Appointment</h2>
+            <p class="section-subtitle">Fill out the details below to complete your booking directly over WhatsApp</p>
+            
+            <form class="booking-form" onsubmit="sendWhatsApp(event)">
+                <div class="form-group">
+                    <label for="branch">Select Clinic Location Branch:</label>
+                    <select id="branch" onchange="updatePopupNumber()" required>
+                        <option value="Murtala Way Branch">23 Murtala Muhammad Way (Opp. MTN)</option>
+                        <option value="Uselu Branch">127 Uselu (Success Pharmacy Building)</option>
+                    </select>
+                </div>
+
+                <!-- LIVE NUMBER POPUP NOTIFICATION WITH PULSE ANIMATION -->
+                <div id="whatsapp-popup" class="number-popup">
+                    🚀 Submitting to Murtala Way WhatsApp: <strong>+234 916 905 8409</strong>
+                </div>
+
+                <div class="form-group">
+                    <label for="patientName">Patient Full Name:</label>
+                    <input type="text" id="patientName" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="patientPhone">Contact Phone Number:</label>
+                    <input type="tel" id="patientPhone" placeholder="Enter your phone number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="treatment">Select Dental / Craniofacial Treatment:</label>
+                    <select id="treatment" required>
+                        <!-- EMERGENCY BLOCK -->
+                        <optgroup label="🚨 Urgent Assistance">
+                            <option value="Emergency Dental Treatment">Emergency Dental Treatment</option>
+                        </optgroup>
+
+                        <optgroup label="General & Preventive Care">
+                            <option value="Scaling and Polishing">Scaling & Polishing</option>
+                            <option value="Mouth Odour Treatment">Mouth Odour Treatment</option>
+                            <option value="Teeth Whitening">Teeth Whitening</option>
+                        </optgroup>
+                        
+                        <optgroup label="Surgical Extractions">
+                            <option value="Simple Extraction">Simple Extraction</option>
+                            <option value="Routine Extraction">Routine Extraction</option>
+                            <option value="Wisdom Tooth Extraction">Wisdom Tooth Care</option>
+                        </optgroup>
+                        
+                        <optgroup label="Restorations & Orthodontics">
+                            <option value="GIC Filling">GIC Filling</option>
+                            <option value="Composite Filling">Composite Restoration</option>
+                            <option value="Amalgam Filling">Amalgam Filling</option>
+                            <option value="Crowns">Crowns (General)</option>
+                            <option value="Acrylic Crowns">Acrylic Crowns</option>
+                            <option value="Post and Core">Post and Core Treatment</option>
+                            <option value="Root Canal Therapy (RCT)">Root Canal Therapy (RCT)</option>
+                            <option value="Orthodontic Braces">Orthodontic Braces (Braces 2)</option>
+                        </optgroup>
+                        
+                        <optgroup label="Prosthodontics & Crowns">
+                            <option value="Zirconia Crown">Zirconia Crown</option>
+                            <option value="PFM Crown 1">PFM Crown Type 1</option>
+                            <option value="PFM Crown 2">PFM Crown Type 2</option>
+                            <option value="Dental Bridge 1">Dental Bridge Variant 1</option>
+                            <option value="Dental Bridge 2">Dental Bridge Variant 2</option>
+                            <option value="Denture Restoration">Denture Therapy</option>
+                            <option value="Dental Implant">Dental Implant Surgery</option>
+                        </optgroup>
+                        
+                        <optgroup label="Advanced Craniofacial & Maxillofacial Surgery">
+                            <option value="Parotidectomy">Parotidectomy Surgery</option>
+                            <option value="TMJ Surgery">TMJ Surgery Procedure</option>
+                            <option value="Maxillectomy">Maxillectomy Procedure</option>
+                            <option value="Mandibulectomy">Mandibulectomy Procedure</option>
+                            <option value="Cleft Lip Repair">Cleft Lip Reconstructive Surgery</option>
+                            <option value="Cleft Palate Repair">Cleft Palate Reconstructive Surgery</option>
+                            <option value="Face Reconstruction">Advanced Face Reconstruction</option>
+                            <option value="Face Esthetic Surgery">Face Esthetic Aesthetic Surgery</option>
+                            <option value="Lip Augmentation">Lip Augmentation Treatment</option>
+                            <option value="Keloid Treatment">Advanced Keloid Removal</option>
+                        </optgroup>
+
+                        <!-- GENERAL MISCELLANEOUS OPTION -->
+                        <optgroup label="Other Concerns">
+                            <option value="Other Treatment Requirement">Other (Please discuss with Consultant)</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="appointmentDate">Preferred Date:</label>
+                        <input type="date" id="appointmentDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="appointmentTime">Preferred Time Slot:</label>
+                        <input type="time" id="appointmentTime" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-form-btn">📲 Submit to Suntop via WhatsApp</button>
+            </form>
+        </section>
+
+        <!-- Section: Comprehensive Treatment Gallery -->
+        <section id="services" class="pricing-section">
+      
